@@ -7,8 +7,6 @@ public class Main {
         Scanner in = new Scanner(System.in);
         PrintWriter out = new PrintWriter(System.out);
 
-
-
         in.close();
         out.close();
     }
