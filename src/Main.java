@@ -7,6 +7,8 @@ public class Main {
         Scanner in = new Scanner(System.in);
         PrintWriter out = new PrintWriter(System.out);
 
+        out.println(new ValidParentheses().isValid("{}(())[]"));
+
         in.close();
         out.close();
     }
