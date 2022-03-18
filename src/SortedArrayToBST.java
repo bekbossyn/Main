@@ -1,50 +1,14 @@
 public class SortedArrayToBST {
 
     public TreeNode sortedArrayToBST(int[] nums) {
-        TreeNode root = new TreeNode(nums[nums.length / 2]);
-        for (int i = nums.length / 2 - 1; i >=0 ; i--) {
-            TreeNode h = root;
-            while (true) {
-                if (nums[i] > h.val) {
-                    if (h.right != null) {
-                        h = h.right;
-                    } else {
-                        h.right = new TreeNode(nums[i]);
-                        break;
-                    }
-
-                } else {
-                    if (h.left != null) {
-
-                        h = h.left;
-                    }else {
-                        h.left = new TreeNode(nums[i]);
-                        break;
-                    }
-                }
-            }
-        }
-        for (int i = nums.length / 2 + 1; i < nums.length; i++) {
-            TreeNode h = root;
-            while (true) {
-                if (nums[i] > h.val) {
-                    if (h.right != null) {
-                        h = h.right;
-                    } else {
-                        h.right = new TreeNode(nums[i]);
-                        break;
-                    }
-
-                } else {
-                    if (h.left != null) {
-                        h = h.left;
-                    }else {
-                        h.left = new TreeNode(nums[i]);
-                        break;
-                    }
-                }
-            }
-        }
-        return root;
+        return sortBTS(nums, 0, nums.length-1);
+    }
+    public TreeNode sortBTS(int[] nums, int l, int r){
+        if (l >r) return null;
+        int m = (l + r +1)/ 2;
+        TreeNode node = new TreeNode(nums[m]);
+        node.left = sortBTS(nums, l, m-1);
+        node.right = sortBTS(nums, m+1, r);
+        return node;
     }
 }

@@ -6,8 +6,9 @@ public class Main {
 
         Scanner in = new Scanner(System.in);
         PrintWriter out = new PrintWriter(System.out);
-
-        out.println(new SortedArrayToBST().sortedArrayToBST(new int[]{0,1,2,3,4,5}));
+        TreeNode tr = new SortedArrayToBST().sortedArrayToBST(new int[]{0,1,2,3,4,5});
+        String str = TreeNode.treeToString(tr);
+        out.println(str);
 
         in.close();
         out.close();
