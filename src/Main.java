@@ -1,3 +1,5 @@
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.*;
 import java.io.PrintWriter;
 
@@ -6,10 +8,16 @@ public class Main {
 
         Scanner in = new Scanner(System.in);
         PrintWriter out = new PrintWriter(System.out);
-        TreeNode tr = new SortedArrayToBST().sortedArrayToBST(new int[]{0,1,2,3,4,5});
-        String str = TreeNode.treeToString(tr);
-        out.println(str);
 
+//        LocalDateTime now = LocalDateTime.now();
+
+
+        
+
+
+//        LocalDateTime now1 = LocalDateTime.now();
+//        long secs = ChronoUnit.MILLIS.between(now, now1);
+//        out.printf("%.3f", secs/1000.0);
         in.close();
         out.close();
     }
