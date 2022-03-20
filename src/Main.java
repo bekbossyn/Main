@@ -11,7 +11,11 @@ public class Main {
 
         LocalDateTime now = LocalDateTime.now();
 
-
+        out.println(new NextGreaterElement3().nextGreaterElement(2147483476));
+//        out.println(new NextGreaterElement3().nextGreaterElement(20123321));
+//        out.println(new NextGreaterElement3().nextGreaterElement(4531));
+//        out.println(new NextGreaterElement3().nextGreaterElement(12));
+//        out.println(new NextGreaterElement3().nextGreaterElement(987854321));
 
         LocalDateTime now1 = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(now, now1);
