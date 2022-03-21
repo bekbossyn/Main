@@ -11,7 +11,7 @@ public class Main {
 
         LocalDateTime now = LocalDateTime.now();
 
-        out.println(new CharFrequencySort().frequencySort("abbA"));
+        out.println(new FindFinalValue().findFinalValue(new int[]{2,7,9}, 4));
 
         LocalDateTime now1 = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(now, now1);
