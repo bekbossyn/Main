@@ -12,11 +12,13 @@ public class Main {
         LocalDateTime now = LocalDateTime.now();
 
         out.println(new FindFinalValue().findFinalValue(new int[]{2, 7, 9}, 4));
-        out.println(Arrays.toString(new Intersection2().intersect(new int[]{1, 2, 2, 1}, new int[]{2, 2})));
+        out.println(new CommonChars().commonChars(new String[]{"bella", "label", "roller"}));
+        out.println(new CommonChars().commonChars(new String[]{"cool", "lock", "cook"}));
+        out.println(new CommonChars().commonChars(new String[]{"acabcddd", "bcbdbcbd", "baddbadb", "cbdddcac", "aacbcccd", "ccccddda", "cababaab", "addcaccd"}));
 
         LocalDateTime now1 = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(now, now1);
-        out.printf("%.3f", secs / 1000.0);
+        out.printf("%.3f\n", secs / 1000.0);
 
         in.close();
         out.close();
