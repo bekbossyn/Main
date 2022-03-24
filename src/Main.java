@@ -11,7 +11,8 @@ public class Main {
 
         LocalDateTime now = LocalDateTime.now();
 
-        out.println(new FindFinalValue().findFinalValue(new int[]{2,7,9}, 4));
+        out.println(new FindFinalValue().findFinalValue(new int[]{2, 7, 9}, 4));
+        out.println(new CheckIfExist().checkIfExist(new int[]{10, 2, 5, 3}));
 
         LocalDateTime now1 = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(now, now1);
