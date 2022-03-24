@@ -12,9 +12,7 @@ public class Main {
         LocalDateTime now = LocalDateTime.now();
 
         out.println(new FindFinalValue().findFinalValue(new int[]{2, 7, 9}, 4));
-        out.println(new CommonChars().commonChars(new String[]{"bella", "label", "roller"}));
-        out.println(new CommonChars().commonChars(new String[]{"cool", "lock", "cook"}));
-        out.println(new CommonChars().commonChars(new String[]{"acabcddd", "bcbdbcbd", "baddbadb", "cbdddcac", "aacbcccd", "ccccddda", "cababaab", "addcaccd"}));
+        out.println(new FindDisappearedNumbers().findDisappearedNumbers(new int[]{4, 3, 2, 7, 8, 2, 3, 1}));
 
         LocalDateTime now1 = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(now, now1);
