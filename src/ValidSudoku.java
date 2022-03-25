@@ -2,6 +2,18 @@ import java.util.HashSet;
 
 public class ValidSudoku {
 
+    public boolean isValidSudoku(char[][] b) {
+        HashSet<String> h = new HashSet();
+        for (int i = 0; i < b.length; i++) {
+            for (int j = 0; j < b.length; j++)
+                if (b[i][j] != '.')
+                    if (!h.add(b[i][j] + " row " + i) || !h.add(b[i][j] + " col " + j) || !h.add(b[i][j] + " row " + i / 3 + " col " + j / 3))
+                        return false;
+        }
+        return true;
+    }
+
+    /*
     public boolean isValidSudoku(char[][] board) {
         int[][] b = new int[10][10];
         for (int i = 0; i < board.length; i++) {
@@ -72,5 +84,5 @@ public class ValidSudoku {
         }
         return true;
     }
-
+    */
 }
