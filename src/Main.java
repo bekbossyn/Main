@@ -12,7 +12,7 @@ public class Main {
         LocalDateTime now = LocalDateTime.now();
 
         out.println(new FindFinalValue().findFinalValue(new int[]{2, 7, 9}, 4));
-        out.println(new FindDisappearedNumbers().findDisappearedNumbers(new int[]{4, 3, 2, 7, 8, 2, 3, 1}));
+        out.println(new MissingNumber().missingNumber(new int[]{9,6,4,2,3,5,7,0,1}));
 
         LocalDateTime now1 = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(now, now1);
