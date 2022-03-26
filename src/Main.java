@@ -11,8 +11,7 @@ public class Main {
 
         LocalDateTime now = LocalDateTime.now();
 
-        out.println(new IsThree().isThree(9));
-        out.println(new IsThree().isThree(14));
+        out.println(new RemoveElement().removeElement(new int[]{3, 2, 2, 3}, 3));
 
         LocalDateTime now1 = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(now, now1);
