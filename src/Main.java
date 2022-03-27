@@ -12,8 +12,11 @@ public class Main {
         LocalDateTime now = LocalDateTime.now();
 
         ListNode l = new ListNode();
-        l = l.toListNode("1,2,3,4,5");
-        out.println(new SwapNodes().swapNodes(l, 2));
+        l = l.toListNode("1");
+        out.println(new SwapPairs().swapPairs(l));
+        out.println(new SwapPairs().swapPairs(null));
+        l = l.toListNode("1,2,3,4,5,6,7,8,9,10");
+        out.println(new SwapPairs().swapPairs(l));
 
         LocalDateTime now1 = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(now, now1);
