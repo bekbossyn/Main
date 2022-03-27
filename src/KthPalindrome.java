@@ -5,7 +5,6 @@ public class KthPalindrome {
 
     public long[] kthPalindrome(int[] queries, int intLength) {
         long[] ans = new long[queries.length];
-        int
         for (int i = 0; i < queries.length; i++) {
             if (9 * (long) Math.pow(10, (double) ((intLength - 1) / 2)) < queries[i]) {
                 ans[i] = -1;
