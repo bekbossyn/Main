@@ -1,5 +1,5 @@
 public class ListNode {
-    int val;
+    ListNode val;
     ListNode next;
 
     ListNode() {
