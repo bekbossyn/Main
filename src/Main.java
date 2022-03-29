@@ -11,17 +11,11 @@ public class Main {
 
         LocalDateTime now = LocalDateTime.now();
 
-        ListNode l = new ListNode();
-        l = l.toListNode("1");
-        out.println(new SwapPairs().swapPairs(l));
-        out.println(new SwapPairs().swapPairs(null));
-        l = l.toListNode("1,2,3,4,5,6,7,8,9,10");
-        out.println(new SwapPairs().swapPairs(l));
 
         LocalDateTime now1 = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(now, now1);
         out.printf("%.3f\n", secs / 1000.0);
-
+        new SearchMatrix().searchMatrix(new int[][]{{1, 3, 5, 7}, {10, 11, 16, 20}, {23, 30, 34, 60}}, 3);
         in.close();
         out.close();
     }
