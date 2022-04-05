@@ -9,5 +9,5 @@ public class Tribonacci {
         }
         return ns[n];
     }
-    
+
 }
