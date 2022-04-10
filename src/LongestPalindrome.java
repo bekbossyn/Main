@@ -5,6 +5,17 @@ import java.util.Queue;
 public class LongestPalindrome {
 
     public int longestPalindrome(String s) {
+        int[] cs = new int[128];
+        for (char c : s.toCharArray()) cs[c]++;
+        int ans = 0;
+        for (int i : cs) {
+            ans += i / 2 * 2;
+        }
+        if (ans < s.length()) ans++;
+        return ans;
+    }
+/*
+public int longestPalindrome(String s) {
         HashMap<Character, Integer> h = new HashMap<>();
         for (char c : s.toCharArray()) {
             h.put(c, h.getOrDefault(c, 0) + 1);
@@ -31,5 +42,5 @@ public class LongestPalindrome {
         }
         return cnt + max;
     }
-
+ */
 }
