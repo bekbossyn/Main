@@ -1,18 +1,10 @@
 public class GetDecimalValue {
 
     public int getDecimalValue(ListNode head) {
-        int sum = 0;
-        ListNode dummy = new ListNode(0);
-        dummy.next = head;
-        int power = 0;
-        while (head != null) {
+        int sum = head.val;
+        while (head.next != null) {
+            sum = sum * 2 + head.next.val;
             head = head.next;
-            power++;
-        }
-        dummy = dummy.next;
-        while (dummy != null) {
-            sum += dummy.val * (int) Math.pow(2, --power);
-            dummy = dummy.next;
         }
         return sum;
     }
