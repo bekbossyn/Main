@@ -22,4 +22,16 @@ public class RemoveDuplicates {
         return ss.reverse().toString();
     }
 
+    public String removeDuplicates(String s, int k) {
+        Stack<Character> st = new Stack<>();
+        for (char ch : s.toCharArray()) {
+            if (!st.isEmpty()) {
+                if (st.peek() == ch) st.pop();
+                else st.push(ch);
+            } else st.push(ch);
+        }
+        return s;
+    }
+
+
 }
