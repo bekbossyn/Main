@@ -6,14 +6,10 @@ public class AnagramMappings {
 
     public int[] anagramMappings(int[] ns1, int[] ns2) {
         int[] res = new int[ns2.length];
-        for (int i = 0; i < ns1.length; i++) {
-            for (int j = 0; j < ns2.length; j++) {
-                if (ns1[i] == ns2[j]) {
-                    res[i] = j;
-                    ns2[j] = -1;
-                }
-            }
-        }
+        HashMap<Integer, Integer> h = new HashMap<>();
+        for (int i = 0; i < ns2.length; i++) h.put(ns2[i], i);
+        int t = 0;
+        for (int n : ns1) res[t++] = h.get(n);
         return res;
     }
 
