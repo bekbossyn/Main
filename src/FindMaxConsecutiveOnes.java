@@ -31,7 +31,7 @@ public class FindMaxConsecutiveOnes {
             if (ns[i] == 1) b[i] = b[i - 1] + 1;
             max = Math.max(b[i], max);
         }
-        
+
         if (max <l)
             max = max + 1;
 
