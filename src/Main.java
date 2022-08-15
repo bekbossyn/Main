@@ -15,7 +15,8 @@ public class Main {
         LocalDateTime now1 = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(now, now1);
         out.printf("%.3f\n", secs / 1000.0);
-        new SearchMatrix().searchMatrix(new int[][]{{1, 3, 5, 7}, {10, 11, 16, 20}, {23, 30, 34, 60}}, 3);
+        int res = new RomanToInt().romanToInt("MCMXCIV");
+        out.println(res);
         in.close();
         out.close();
     }
