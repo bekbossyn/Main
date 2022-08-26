@@ -16,8 +16,7 @@ public class Main {
         long secs = ChronoUnit.MILLIS.between(now, now1);
         out.printf("%.3f\n", secs / 1000.0);
 
-        out.println(new ReorderedPowerOf2().reorderedPowerOf2(1024));
-
+        
         in.close();
         out.close();
     }
