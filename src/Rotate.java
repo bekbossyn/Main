@@ -21,4 +21,25 @@ public class Rotate {
         }
     }
 
+    public void rotate(int[][] m) {
+        int l = m.length;
+        for (int i = 0; i < l; i++) {
+            for (int j = i + 1; j < l; j++) {
+                int t = m[i][j];
+                m[i][j] = m[j][i];
+                m[j][i] = t;
+            }
+        }
+
+        for (int i = 0; i < l; i++) {
+            for (int j = 0; j < l / 2; j++) {
+                int t = m[i][j];
+                m[i][j] = m[i][l - j - 1];
+                m[i][l - j - 1] = t;
+            }
+        }
+
+        for (int[] ints : m) System.out.println(Arrays.toString(ints));
+    }
+
 }
