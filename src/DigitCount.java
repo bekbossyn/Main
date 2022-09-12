@@ -8,7 +8,6 @@ public class DigitCount {
         for (int i = 0; i < num.length(); i++) {
             digits[num.charAt(i) - '0']++;
         }
-        System.out.println(Arrays.toString(digits));
         for (int i = 0; i < num.length(); i++) {
             if (digits[i] != num.charAt(i) - '0') return false;
         }
