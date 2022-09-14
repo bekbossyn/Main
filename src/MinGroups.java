@@ -13,7 +13,7 @@ public class MinGroups {
             if (!q.isEmpty() && q.peek() < i[0]) q.remove();
 //            System.out.println(q);
             q.add(i[1]);
-            System.out.println(q);
+//            System.out.println(q);
         }
         return q.size();
     }
