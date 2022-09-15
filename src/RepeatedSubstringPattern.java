@@ -1,7 +1,7 @@
 public class RepeatedSubstringPattern {
 
     public boolean repeatedSubstringPattern(String s) {
-        for (int i = 1; i < s.length() / 2; i++)
+        for (int i = (s.length() + 1) / 2; i > 0 ; i--)
             if (check(s, i))
                 return true;
         return false;
