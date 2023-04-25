@@ -3,8 +3,6 @@ import java.util.*;
 
 public class Sample {
 
-    ////
-    //
 
     public static class Pair {
 
