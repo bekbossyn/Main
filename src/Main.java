@@ -11,11 +11,11 @@ public class Main {
 
         LocalDateTime now = LocalDateTime.now();
 
-        out.println(Arrays.toString(new GetSubarrayBeauty().getSubarrayBeauty(new int[]{0,1,2,3,4,5}, 2, 2)));
+        out.println(Arrays.toString(new GetSubarrayBeauty().getSubarrayBeauty(new int[]{0,1,3,4,5}, 2, 2)));
 
         LocalDateTime now1 = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(now, now1);
-        out.printf("%.3f\n", secs / 1000.0);
+        out.printf("%.3f seconds\n", secs / 1000.0);
 
         in.close();
         out.close();
