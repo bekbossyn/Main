@@ -16,7 +16,8 @@ public class Main {
 //        out.println(new MinIncrements().minIncrements(3, new int[]{5, 3, 3}));
 //        out.println(Arrays.toString(new GetSubarrayBeauty().getSubarrayBeauty(new
 //        int[]{0,1,3,4,5}, 2, 2)));
-        out.println(new CombinationSum3().combinationSum3(7,38));
+//        out.println(new CombinationSum().combinationSum(new int[]{2, 3, 6, 7}, 7));
+        out.println(new CombinationSum().combinationSum(new int[]{3,12,9,11,6,7,8,5,4}, 15));
 
         LocalDateTime now1 = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(now, now1);
