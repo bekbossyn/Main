@@ -11,13 +11,7 @@ public class Main {
 
         LocalDateTime now = LocalDateTime.now();
 
-//        out.println(Arrays.toString(new GetSubarrayBeauty().getSubarrayBeauty(new int[]{0,1,3,4,5}, 2, 2)));
-//        out.println(new MinIncrements().minIncrements(7, new int[]{1, 5, 2, 2, 3, 3, 1}));
-//        out.println(new MinIncrements().minIncrements(3, new int[]{5, 3, 3}));
-//        out.println(Arrays.toString(new GetSubarrayBeauty().getSubarrayBeauty(new
-//        int[]{0,1,3,4,5}, 2, 2)));
-//        out.println(new CombinationSum().combinationSum(new int[]{2, 3, 6, 7}, 7));
-        out.println(new CombinationSum().combinationSum(new int[]{3,12,9,11,6,7,8,5,4}, 15));
+        out.println(new Subsets().subsets(new int[]{1,2,3}));
 
         LocalDateTime now1 = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(now, now1);
