@@ -11,7 +11,7 @@ public class Main {
 
         LocalDateTime now = LocalDateTime.now();
 
-        out.println(new Subsets().subsets(new int[]{1,2,3}));
+        out.println(new Permute().permute(new int[]{1,2,3,4,5,6}));
 
         LocalDateTime now1 = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(now, now1);
