@@ -6,35 +6,41 @@ File creation Date and time:
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
 public class PermuteUnique {
 
-    static HashSet<List<Integer>> h = new HashSet<>();
+    //    private static HashSet<List<Integer>> h = new HashSet<>();
+    private static HashSet<List<Integer>> result;
 
     public List<List<Integer>> permuteUnique(int[] ns) {
-        h = new HashSet<>();
-        List<Integer> left = new ArrayList<>();
-        for (int n : ns) left.add(n);
-        helper(new ArrayList<>(), left, 0, ns);
-        return new ArrayList<>(h);
+        result = new HashSet<>();
+        Arrays.sort(ns);
+        backtrack(0, ns);
+        return new ArrayList<>(result);
     }
 
-    void helper(List<Integer> listCopy, List<Integer> left, int pos, int[] ns) {
-        if (pos >= ns.length) {
-            h.add(new ArrayList<>(listCopy));
-            return;
+    void backtrack(int index, int[] ns) {
+        if (index == ns.length) {
+            List<Integer> list = new ArrayList<>(ns.length);
+            for (int n : ns) list.add(n);
+            result.add(list);
+        } else {
+            for (int i = index; i < ns.length; i++) {
+                if (i > index && ns[i] == ns[index]) continue;
+                swap(i, index, ns);
+                backtrack(index + 1, ns);
+                swap(i, index, ns);
+            }
         }
-        for (int i = 0; i < left.size(); i++) {
-            int num = left.get(i);
-            List<Integer> list = new ArrayList<>(left);
-            list.remove(i);
-            listCopy.add(num);
-            helper(listCopy, list, pos + 1, ns);
-            listCopy.remove(listCopy.size() - 1);
-        }
+    }
 
+    void swap(int i, int j, int[] ns) {
+        int temp = ns[i];
+        ns[i] = ns[j];
+        ns[j] = temp;
     }
 
 }
