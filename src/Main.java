@@ -11,8 +11,6 @@ public class Main {
 
         LocalDateTime now = LocalDateTime.now();
 
-        out.println(new Permute().permute(new int[]{1, 2, 3, 4, 5, 6}));
-//        out.println(new Exist().exist(new char[][]{{'A', 'B', 'C', 'E'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}}, "ABCCED"));
         out.println(new Exist().exist(new char[][]{{'A'}}, "A"));
 
         LocalDateTime now1 = LocalDateTime.now();
