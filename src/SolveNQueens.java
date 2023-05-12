@@ -31,9 +31,14 @@ public class SolveNQueens {
         ax = new ArrayList<>();
         ay = new ArrayList<>();
         lefts = new ArrayList<>();
-
+        for (int j = 0; j < n; j++) {
+            lefts.add(j);
+        }
         for (int i = 0; i < n; i++) {
-            backtrack(board, 0, i, n);
+            int num = lefts.get(i);
+            List<Integer> list = new ArrayList<>(lefts);
+            list.remove(i);
+            backtrack(board, 0, i, n, list);
         }
 
         return result;
@@ -42,7 +47,7 @@ public class SolveNQueens {
     // board = board to put queens
     // x,y = coordinates of new Queen
     //  left = number of queens left to put to board
-    void backtrack(char[][] board, int x, int y, int left) {
+    void backtrack(char[][] board, int x, int y, int left, List<Integer> lefts) {
         //  setting data
         board[x][y] = 'Q';
         ax.add(x);
@@ -61,7 +66,10 @@ public class SolveNQueens {
             return;
         }
         int xx = x + 1;
-        for (int yy = 0; yy < board[0].length; yy++) {
+        List<Integer> list = new ArrayList<>(lefts);
+        for (int l = 0; l < list.size(); l++) {
+//      for (int yy = 0; yy < board[0].length; yy++) {
+            int yy = list.get(l);
             boolean allowed = true;
             for (int j = 0; j < ax.size(); j++) {
                 int nx = ax.get(j);
@@ -71,7 +79,11 @@ public class SolveNQueens {
                     break;
                 }
             }
-            if (allowed) backtrack(board, xx, yy, left);
+            if (allowed) {
+                List<Integer> list2 = new ArrayList<>(list);
+                list2.remove(l);
+                backtrack(board, xx, yy, left, list2);
+            }
         }
 
         //  unSetting data
@@ -79,6 +91,7 @@ public class SolveNQueens {
         ax.remove(ax.size() - 1);
         ay.remove(ay.size() - 1);
     }
+
 
     void putQueens(char[][] board) {
         List<String> list = new ArrayList<>();
