@@ -12,7 +12,7 @@ public class Main {
         LocalDateTime now = LocalDateTime.now();
 
 //        out.println(new Exist().exist(new char[][]{{'A'}}, "A"));
-        out.println(new GetPermutation().getPermutation(7, 745));
+        out.println(new TotalNQueens().totalNQueens(11));
 
         LocalDateTime now1 = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(now, now1);
