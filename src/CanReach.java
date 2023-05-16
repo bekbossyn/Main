@@ -5,6 +5,10 @@ File creation Date and time:
 */
 
 
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class CanReach {
 
     public boolean canReach(int[] arr, int start) {
@@ -25,5 +29,33 @@ public class CanReach {
         }
         return first || second;
     }
+
+    public boolean canReach(String s, int minJump, int maxJump) {
+        int len = s.length();
+        boolean[] visited = new boolean[len];
+        int[] b = new int[len];
+        Arrays.fill(b, 100001);
+        b[0] = 0;
+        Queue<Integer> q = new LinkedList<>();
+        q.add(0);
+        while (!q.isEmpty() && !visited[len - 1]) {
+            int curIndex = q.remove();
+            visited[curIndex] = true;
+            int cnt = 0;
+            for (int i = Math.min(len - 1, curIndex + maxJump); i >= curIndex + minJump; i--) {
+                if (s.charAt(i) == '0' && !visited[i]) {
+                    b[i] = b[curIndex] + 1;
+                    q.add(i);
+                    visited[i] = true;
+                    cnt++;
+                    if (cnt >= minJump)
+                        break;
+                }
+            }
+        }
+
+        return visited[len - 1];
+    }
+
 
 }
