@@ -12,7 +12,7 @@ public class Main {
         LocalDateTime now = LocalDateTime.now();
 
 //        out.println(new Exist().exist(new char[][]{{'A'}}, "A"));
-        out.println(new KMirror().kMirror(3,7));
+        out.println(new NumPrimeArrangements().numPrimeArrangements(100));
 
         LocalDateTime now1 = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(now, now1);
