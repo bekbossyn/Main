@@ -12,7 +12,10 @@ public class Main {
         LocalDateTime now = LocalDateTime.now();
 
 //        out.println(new Exist().exist(new char[][]{{'A'}}, "A"));
-        out.println(new NumPrimeArrangements().numPrimeArrangements(100));
+//        out.println(new NumPrimeArrangements().numPrimeArrangements(100));
+
+        int[] arr = new int[]{4,2,1,4,3,4,5,8,15};
+        System.out.println(new LengthOfLIS().lengthOfLIS(arr,3));
 
         LocalDateTime now1 = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(now, now1);
