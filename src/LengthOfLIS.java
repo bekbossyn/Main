@@ -19,49 +19,58 @@ public class LengthOfLIS {
     }
 
     //  Segment tree with max query
+    int[] sTree;
+    int n;
 
-    int n = 100001;
-    int[] tree = new int[2 * n];
+    public class SegmentTree {
 
-    public void update(int position, int value) {
-        position += n;
-        tree[position] = value;
-        while (position > 1) {
-            position /= 2;
-            tree[position] = Math.max(tree[2 * position], tree[2 * position + 1]);
+        SegmentTree(int n) {
+            sTree = new int[2 * n];
         }
+
+        void update(int position, int value) {
+            position += n;
+            sTree[position] = value;
+            while (position > 1) {
+                position /= 2;
+                sTree[position] = Math.max(sTree[2 * position], sTree[2 * position + 1]);
+            }
+        }
+
+        int max(int from, int to) {  //  [from, to)
+            from += n;  //  original positions
+            to += n;
+            int max = 0;
+            while (from < to) {
+                if ((from & 1) == 1) {    //  odd
+                    max = Math.max(max, sTree[from]);
+                    from++;
+                }
+                if ((to & 1) == 1) {    //  odd
+                    to--;
+                    max = Math.max(max, sTree[to]);
+                }
+                from /= 2;
+                to /= 2;
+            }
+            return max;
+        }
+
     }
 
-    public int max(int from, int to) {  //  [from, to)
-        from += n;
-        to += n;
-        int max = 0;
-
-        while (from < to) {
-            if ((from & 1) == 1) {  //  if from is odd
-                max = Math.max(max, tree[from]);
-                from++;
-            }
-            if ((to & 1) == 1) { // if to is odd
-                to--;   //  then it is the right child
-                //  might as well use the parent
-                max = Math.max(max, tree[to]);
-            }
-            from /= 2;  //  walk up to next level of the tree
-            to /= 2;
-        }
-        return max;
-    }
 
     public int lengthOfLIS(int[] ns, int k) {
 
+        n = 100001;
+        SegmentTree tree = new SegmentTree(n);
         int result = 0;
         for (int to : ns) {
             int from = Math.max(0, to - k);
-            int max = max(from, to) + 1;    //  best result for current element
+            int max = tree.max(from, to) + 1;
             result = Math.max(result, max);
-            update(to, max);             //  update max
+            tree.update(to, max);
         }
         return result;
     }
+
 }
