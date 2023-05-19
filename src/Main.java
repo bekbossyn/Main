@@ -14,8 +14,10 @@ public class Main {
 //        out.println(new Exist().exist(new char[][]{{'A'}}, "A"));
 //        out.println(new NumPrimeArrangements().numPrimeArrangements(100));
 
-        int[] arr = new int[]{4,2,1,4,3,4,5,8,15};
-        System.out.println(new LengthOfLIS().lengthOfLIS(arr,3));
+//        int[] arr = new int[]{4,2,1,4,3,4,5,8,15};
+//        int[] arr = new int[]{1,3,5,4,7};
+        int[] arr = new int[]{100,-23,-23,404,100,23,23,23,3,404};
+        System.out.println(new MinJumps().minJumps(arr));
 
         LocalDateTime now1 = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(now, now1);
