@@ -16,8 +16,12 @@ public class Main {
 
 //        int[] arr = new int[]{4,2,1,4,3,4,5,8,15};
 //        int[] arr = new int[]{1,3,5,4,7};
-        int[] arr = new int[]{100,-23,-23,404,100,23,23,23,3,404};
-        System.out.println(new MinJumps().minJumps(arr));
+//        int[] arr = new int[]{100,-23,-23,404,100,23,23,23,3,404};
+//        System.out.println(new MinJumps().minJumps(arr));
+//        int[][] ps = new int[][]{{2, 1}, {3, 4}, {3, 2}};
+//        int[][] ps = new int[][]{{4, -2}, {1, 4}, {-3, 1}};
+        int[][] ps = new int[][]{{4, -10}, {-1, 3}, {4, -3}, {-3, 3}};
+        System.out.println(Arrays.toString(new RestoreArray().restoreArray(ps)));
 
         LocalDateTime now1 = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(now, now1);
