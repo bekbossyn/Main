@@ -11,7 +11,7 @@ public class Main {
 
         LocalDateTime now = LocalDateTime.now();
 
-        
+
 
         LocalDateTime now1 = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(now, now1);
