@@ -9,12 +9,12 @@ public class Main {
         Scanner in = new Scanner(System.in);
         PrintWriter out = new PrintWriter(System.out);
 
-        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime start = LocalDateTime.now();
 
+        out.println(new SpiralOrder().spiralOrder(new int[][]{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}));
 
-
-        LocalDateTime now1 = LocalDateTime.now();
-        long secs = ChronoUnit.MILLIS.between(now, now1);
+        LocalDateTime finish = LocalDateTime.now();
+        long secs = ChronoUnit.MILLIS.between(start, finish);
         out.printf("%.3f seconds\n", secs / 1000.0);
 
         in.close();
