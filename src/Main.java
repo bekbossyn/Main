@@ -11,7 +11,7 @@ public class Main {
 
         LocalDateTime start = LocalDateTime.now();
 
-        out.println(new GenerateParenthesis().generateParenthesis(3));
+        out.println(new CombinationSum2().combinationSum2(new int[]{10, 1, 2, 7, 6, 1, 5,5}, 8));
 
         LocalDateTime finish = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(start, finish);
