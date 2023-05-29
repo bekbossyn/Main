@@ -11,7 +11,7 @@ public class Main {
 
         LocalDateTime start = LocalDateTime.now();
 
-        out.println(Arrays.deepToString(new SpiralMatrixIII().spiralMatrixIII(5, 6, 1, 4)));
+        out.println(new GenerateParenthesis().generateParenthesis(3));
 
         LocalDateTime finish = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(start, finish);
