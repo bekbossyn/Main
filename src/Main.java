@@ -12,7 +12,7 @@ public class Main {
         LocalDateTime start = LocalDateTime.now();
 
 //        out.println(new IsAdditiveNumber().isAdditiveNumber("199100199"));
-        out.println(new IsAdditiveNumber().isAdditiveNumber("1000001100002"));
+        out.println(Arrays.toString(new TopKFrequent().topKFrequent(new int[]{1, 1, 1, 2, 2, 3}, 2)));
 
         LocalDateTime finish = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(start, finish);
