@@ -11,7 +11,8 @@ public class Main {
 
         LocalDateTime start = LocalDateTime.now();
 
-        out.println(new CombinationSum2().combinationSum2(new int[]{10, 1, 2, 7, 6, 1, 5,5}, 8));
+//        out.println(new IsAdditiveNumber().isAdditiveNumber("199100199"));
+        out.println(new IsAdditiveNumber().isAdditiveNumber("1000001100002"));
 
         LocalDateTime finish = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(start, finish);
