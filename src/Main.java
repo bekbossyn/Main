@@ -11,7 +11,7 @@ public class Main {
 
         LocalDateTime start = LocalDateTime.now();
 
-//        out.println(new IsAdditiveNumber().isAdditiveNumber("199100199"));
+        out.println(new RankTeams().rankTeams(new String[]{"BCA","CAB","CBA","ABC","ACB","BAC"}));
 
         LocalDateTime finish = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(start, finish);
