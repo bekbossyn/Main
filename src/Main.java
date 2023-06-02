@@ -11,7 +11,8 @@ public class Main {
 
         LocalDateTime start = LocalDateTime.now();
 
-        out.println(new RankTeams().rankTeams(new String[]{"BCA","CAB","CBA","ABC","ACB","BAC"}));
+//        out.println(new RankTeams().rankTeams(new String[]{"BCA","CAB","CBA","ABC","ACB","BAC"}));
+        out.println();
 
         LocalDateTime finish = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(start, finish);
