@@ -4,7 +4,7 @@ import java.util.HashSet;
 
 public class SumFourDivisors {
 
-    class Number {
+    static class Number {
         int number;
         int sum;
         int count;
@@ -42,8 +42,8 @@ public class SumFourDivisors {
         HashMap<Integer, Number> hashMap = new HashMap<>();
         for (int i = 0; i < len; i++) {
             if (!hashMap.containsKey(ns[i])) {
-                Number num = new Number(ns[i]);
-                hashMap.put(ns[i], num);
+//                Number num = new Number(ns[i]);
+                hashMap.put(ns[i], new Number(ns[i]));
             }
             Number num =hashMap.get(ns[i]);
             if (num.count==4) sum += num.sum;
