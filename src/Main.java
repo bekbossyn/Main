@@ -12,7 +12,6 @@ public class Main {
         LocalDateTime start = LocalDateTime.now();
 
 //        out.println(new RankTeams().rankTeams(new String[]{"BCA","CAB","CBA","ABC","ACB","BAC"}));
-        out.println(new LargestWordCount().largestWordCount(new String[]{"Hello userTwooo", "Hi userThree asd asd asd", "Wonderful day Alice", "Nice day userThree"}, new String[]{"Alice", "userTwo", "userThree", "Alice"}));
 
         LocalDateTime finish = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(start, finish);
