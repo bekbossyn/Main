@@ -11,7 +11,7 @@ public class Main {
 
         LocalDateTime start = LocalDateTime.now();
 
-        out.println(new SolveEquation().solveEquation("1+2x-34-x=-23x+32"));
+        out.println(new FractionAddition().fractionAddition("-1/2+1/2+1/9-7/8+9/1"));
 
         LocalDateTime finish = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(start, finish);
