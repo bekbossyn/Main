@@ -11,7 +11,7 @@ public class Main {
 
         LocalDateTime start = LocalDateTime.now();
 
-        out.println(new FractionAddition().fractionAddition("-1/2+1/2+1/9-7/8+9/1"));
+        out.println(new MinimizeResult().minimizeResult("123456789+987654321"));
 
         LocalDateTime finish = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(start, finish);
