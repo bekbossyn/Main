@@ -11,7 +11,7 @@ public class Main {
 
         LocalDateTime start = LocalDateTime.now();
 
-        out.println(new SumFourDivisors().sumFourDivisors(new int[]{21,4,7,21}));
+        out.println(new SolveEquation().solveEquation("1+2x-34-x=-23x+32"));
 
         LocalDateTime finish = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(start, finish);
