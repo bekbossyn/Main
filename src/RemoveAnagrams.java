@@ -21,20 +21,12 @@ public class RemoveAnagrams {
     }
 
     boolean anagrams(String a, String b) {
-        HashMap<Character, Integer> ha = new HashMap<>();
-        HashMap<Character, Integer> hb = new HashMap<>();
-        for (char c : a.toCharArray()) ha.put(c, ha.getOrDefault(c, 0) + 1);
-        for (char c : b.toCharArray()) hb.put(c, hb.getOrDefault(c, 0) + 1);
-        for (Map.Entry<Character, Integer> entry : ha.entrySet()) {
-            Character key = entry.getKey();
-            Integer value = entry.getValue();
-            if (hb.containsKey(key)) {
-                if (!Objects.equals(hb.get(key), value)) {
-                    return false;
-                }
-            } else return false;
-        }
-        return ha.size() == hb.size();
+        if (a.length() != b.length()) return false;
+        char[] aa = a.toCharArray();
+        char[] bb = b.toCharArray();
+        Arrays.sort(aa);
+        Arrays.sort(bb);
+        return Arrays.equals(aa, bb);
     }
 
 }
