@@ -11,7 +11,7 @@ public class Main {
 
         LocalDateTime start = LocalDateTime.now();
 
-        out.println(new Calculate1().calculate(" 3+55 / 2 "));// -23
+        out.println(new FindLeastNumOfUniqueInts().findLeastNumOfUniqueInts(new int[]{5,5,5,4,2,2,2,3,3,3,3,3,1,1,4},15));
 
         LocalDateTime finish = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(start, finish);
