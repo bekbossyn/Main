@@ -11,9 +11,7 @@ public class Main {
 
         LocalDateTime start = LocalDateTime.now();
 
-        out.println(new FractionToDecimal().fractionToDecimal(1,124537));
-        out.println(new FractionToDecimal().fractionToDecimal(-50,8));
-        out.println(new FractionToDecimal().fractionToDecimal(-1,-2147483648));
+        out.println(new DistinctPrimeFactors().distinctPrimeFactors(new int[]{2,4,3,7,10,6}));
 
         LocalDateTime finish = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(start, finish);
