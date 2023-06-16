@@ -11,7 +11,7 @@ public class Main {
 
         LocalDateTime start = LocalDateTime.now();
 
-        out.println(new DistinctPrimeFactors().distinctPrimeFactors(new int[]{2,4,3,7,10,6}));
+        out.println(new ReadBinaryWatch().readBinaryWatch(1));
 
         LocalDateTime finish = LocalDateTime.now();
         long secs = ChronoUnit.MILLIS.between(start, finish);
